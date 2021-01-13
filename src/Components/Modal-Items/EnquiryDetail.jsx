@@ -19,19 +19,28 @@ function EnquiryDetail(props) {
     let id = props.id;
     Axios.get(`http://localhost:8989/api/v1/enquiry/getById/${id}`)
       .then((data) => {
-        console.log(data.data.data);
-        // var {
-        //   Name,
-        //   Mobile,
-        //   Address,
-        //   Courses,
-        //   EnquiryFor,
-        //   EnquiryDate,
-        //   FollowupDate,
-        //   HowDiduhearaboutus,
-        //   comments,
-        // } = data.data.data;
-        setenqDetail(data.data.data);
+       
+        var {
+          Name,
+          Mobile,
+          Address,
+          Courses,
+          EnquiryFor,
+          EnquiryDate,
+          FollowupDate,
+          HowDiduhearaboutus,
+          comments,
+        } = data.data.data;
+        console.log(  Name,
+          Mobile,
+          Address,
+          Courses,
+          EnquiryFor,
+          EnquiryDate,
+          FollowupDate,
+          HowDiduhearaboutus,
+          comments,);
+        // setenqDetail(data.data.data);
       })
       .catch((err) => console.log(err));
   }, []);

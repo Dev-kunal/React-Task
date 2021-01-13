@@ -8,10 +8,8 @@ function Mymodal(props) {
   
   const [enquiryDetail, setenquiryDetail] = useState(false);
   // const [Conversation, setConversation] = useState(false);
-  // const [deleteEnquiry, setDeleteEnquiry] = useState(false);
-  // const [addStudent, setAddStudent] = useState(false);
 
- 
+  
   return (
 
     <Modal
@@ -22,23 +20,14 @@ function Mymodal(props) {
     >
       <Modal.Header >
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+        
         </Modal.Title>
       </Modal.Header>
 
       <Modal.Body>
-        {enquiryDetail?<EnquiryDetail id={props.id} />:<ModalMenus setDetails={setenquiryDetail} />}
+        {enquiryDetail ? <EnquiryDetail id={props.id} /> :<ModalMenus setDetails={setenquiryDetail} />}  
       </Modal.Body>
 
-      {/* {enquiryDetail ? (
-        <Modal.Body>
-          <EnquiryDetail id={props.id}/>
-        </Modal.Body>
-      ) : (
-        <Modal.Body>
-          <ModalMenus setDetails={setenquiryDetail} />
-        </Modal.Body>
-      )} */}
       <Modal.Footer>
         <button className="btn-sm btn btn-primary mx-3 btn-block">Save</button>
         <Button

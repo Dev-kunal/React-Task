@@ -8,8 +8,8 @@ function ModalMenus(props) {
   
     return (
         <div>
-          <p>
-            <Link onClick={()=>props.setDetails (true)}>Enquiry Details</Link>
+          <p onClick={()=>props.setDetails (true)}  style={{color:"#007bff",cursor:"pointer"}}>
+           Enquiry Details
           </p>
           <p>
             <Link to="/conversation">Conversation</Link>
